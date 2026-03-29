@@ -1,0 +1,267 @@
+/* ==========================================================================
+   RETRO Y2K - 90s/2000s nostalgia, bright colors, chunky elements
+   ========================================================================== */
+
+body.style-retro-y2k {
+  --color-primary: #ff00ff;
+  --color-primary-hover: #cc00cc;
+  --color-primary-active: #990099;
+  --color-primary-light: #ffe6ff;
+
+  --color-secondary: #00ffff;
+  --color-secondary-hover: #00cccc;
+
+  --color-success: #00ff00;
+  --color-success-light: #e6ffe6;
+  --color-warning: #ffff00;
+  --color-warning-light: #ffffe6;
+  --color-error: #ff0000;
+  --color-error-light: #ffe6e6;
+  --color-info: #0066ff;
+  --color-info-light: #e6f0ff;
+
+  --bg-primary: #c0c0c0;
+  --bg-secondary: #d4d0c8;
+  --bg-tertiary: #808080;
+
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-tertiary: #666666;
+
+  --border-color: #808080;
+  --border-color-light: #ffffff;
+  --border-color-dark: #404040;
+
+  --shadow-sm: inset -1px -1px 0 #404040, inset 1px 1px 0 #ffffff;
+  --shadow-md: inset -2px -2px 0 #404040, inset 2px 2px 0 #ffffff;
+  --shadow-lg: 4px 4px 0 #000000;
+  --shadow-pressed: inset 2px 2px 0 #404040, inset -2px -2px 0 #ffffff;
+
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --border-radius-xl: 0;
+
+  font-family: "MS Sans Serif", "Tahoma", sans-serif;
+}
+
+body.style-retro-y2k .sidebar {
+  background: var(--bg-secondary);
+  border-right: none;
+  box-shadow: var(--shadow-md);
+}
+
+body.style-retro-y2k .sidebar__button {
+  background: var(--bg-secondary);
+  border: none;
+  box-shadow: var(--shadow-md);
+  text-align: left;
+}
+
+body.style-retro-y2k .sidebar__button:active,
+body.style-retro-y2k .sidebar__button--active {
+  box-shadow: var(--shadow-pressed);
+}
+
+body.style-retro-y2k .header {
+  background: linear-gradient(180deg, #000080 0%, #1084d0 100%);
+  color: white;
+  font-weight: bold;
+  box-shadow: var(--shadow-md);
+}
+
+body.style-retro-y2k .footer {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+body.style-retro-y2k .section {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+body.style-retro-y2k .section__title {
+  background: linear-gradient(180deg, #000080 0%, #1084d0 100%);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  margin: calc(var(--spacing-md) * -1);
+  margin-bottom: var(--spacing-md);
+}
+
+body.style-retro-y2k .btn {
+  background: var(--bg-secondary);
+  border: none;
+  box-shadow: var(--shadow-md);
+  font-weight: normal;
+  min-width: 75px;
+}
+
+body.style-retro-y2k .btn:hover {
+  background: var(--bg-primary);
+}
+
+body.style-retro-y2k .btn:active {
+  box-shadow: var(--shadow-pressed);
+}
+
+body.style-retro-y2k .btn--primary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+body.style-retro-y2k .btn--danger {
+  background: var(--color-error);
+  color: white;
+}
+
+body.style-retro-y2k .form-field__input,
+body.style-retro-y2k .form-field__textarea,
+body.style-retro-y2k .form-field__select {
+  background: white;
+  border: none;
+  box-shadow: var(--shadow-pressed);
+}
+
+body.style-retro-y2k .form-field__input:focus,
+body.style-retro-y2k .form-field__textarea:focus,
+body.style-retro-y2k .form-field__select:focus {
+  outline: 1px dotted var(--text-primary);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-pressed);
+}
+
+body.style-retro-y2k .checkbox__box {
+  background: white;
+  border: none;
+  box-shadow: var(--shadow-pressed);
+  border-radius: 0;
+}
+
+body.style-retro-y2k .checkbox__input:checked + .checkbox__box {
+  background: white;
+}
+
+body.style-retro-y2k .checkbox__input:checked + .checkbox__box::after {
+  content: "✓";
+  color: var(--text-primary);
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body.style-retro-y2k .radio__circle {
+  background: white;
+  border: none;
+  box-shadow: var(--shadow-pressed);
+}
+
+body.style-retro-y2k .radio__input:checked + .radio__circle::after {
+  background: var(--text-primary);
+}
+
+body.style-retro-y2k .toggle__track {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-pressed);
+  border: none;
+  border-radius: 0;
+}
+
+body.style-retro-y2k .toggle__thumb {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  border-radius: 0;
+}
+
+body.style-retro-y2k .card {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+body.style-retro-y2k .card__header {
+  background: linear-gradient(180deg, #000080 0%, #1084d0 100%);
+  color: white;
+}
+
+body.style-retro-y2k .modal {
+  background: var(--bg-secondary);
+  box-shadow:
+    var(--shadow-md),
+    6px 6px 0 rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+body.style-retro-y2k .modal__header {
+  background: linear-gradient(180deg, #000080 0%, #1084d0 100%);
+  color: white;
+}
+
+body.style-retro-y2k .tabs__tab {
+  background: var(--bg-primary);
+  border: none;
+  box-shadow: var(--shadow-md);
+  margin-right: 2px;
+}
+
+body.style-retro-y2k .tabs__tab--active {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 1;
+}
+
+body.style-retro-y2k .tabs__panel {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+body.style-retro-y2k .data-table {
+  background: white;
+  box-shadow: var(--shadow-pressed);
+}
+
+body.style-retro-y2k .data-table__th {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+body.style-retro-y2k .progress__track {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-pressed);
+  border-radius: 0;
+}
+
+body.style-retro-y2k .progress__bar {
+  background: linear-gradient(180deg, #000080 0%, #1084d0 100%);
+  border-radius: 0;
+}
+
+body.style-retro-y2k .badge {
+  box-shadow: var(--shadow-sm);
+}
+
+body.style-retro-y2k .alert {
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+body.style-retro-y2k .toast {
+  box-shadow:
+    var(--shadow-md),
+    4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+body.style-retro-y2k .pagination__button,
+body.style-retro-y2k .pagination__page {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+body.style-retro-y2k .pagination__page--active {
+  box-shadow: var(--shadow-pressed);
+  background: var(--bg-primary);
+}

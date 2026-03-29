@@ -1,0 +1,296 @@
+/* ==========================================================================
+   MEMPHIS - 80s design, geometric patterns, bold colors
+   ========================================================================== */
+
+body.style-memphis {
+  --color-primary: #ff6b6b;
+  --color-primary-hover: #ee5a5a;
+  --color-primary-active: #dd4949;
+  --color-primary-light: #ffe0e0;
+
+  --color-secondary: #4ecdc4;
+  --color-secondary-hover: #3dbdb5;
+
+  --color-accent-1: #ffe66d;
+  --color-accent-2: #95e1d3;
+  --color-accent-3: #f38181;
+
+  --color-success: #4ecdc4;
+  --color-success-light: #d4f5f3;
+  --color-warning: #ffe66d;
+  --color-warning-light: #fff9db;
+  --color-error: #ff6b6b;
+  --color-error-light: #ffe0e0;
+  --color-info: #74b9ff;
+  --color-info-light: #dbeeff;
+
+  --bg-primary: #ffeaa7;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #fff5cc;
+
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --text-tertiary: #b2bec3;
+
+  --border-color: #2d3436;
+  --border-color-hover: #000000;
+
+  --shadow-sm: 3px 3px 0 #2d3436;
+  --shadow-md: 5px 5px 0 #2d3436;
+  --shadow-lg: 8px 8px 0 #2d3436;
+  --shadow-xl: 12px 12px 0 #2d3436;
+
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --border-radius-xl: 0;
+
+  font-family: "Poppins", "Futura", sans-serif;
+  background: var(--bg-primary);
+  background-image:
+    radial-gradient(
+      circle at 20% 80%,
+      var(--color-primary) 2px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      var(--color-secondary) 2px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      var(--color-accent-1) 1px,
+      transparent 1px
+    );
+  background-size: 100px 100px;
+}
+
+body.style-memphis .sidebar {
+  background: var(--color-secondary);
+  border-right: 4px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+body.style-memphis .sidebar__button {
+  background: var(--bg-secondary);
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
+
+body.style-memphis .sidebar__button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--border-color);
+}
+
+body.style-memphis .sidebar__button--active {
+  background: var(--color-primary);
+  color: white;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--border-color);
+}
+
+body.style-memphis .header {
+  background: var(--color-primary);
+  border-bottom: 4px solid var(--border-color);
+  box-shadow: 0 var(--shadow-md);
+  color: white;
+}
+
+body.style-memphis .footer {
+  background: var(--color-accent-2);
+  border-top: 4px solid var(--border-color);
+}
+
+body.style-memphis .section {
+  background: var(--bg-secondary);
+  border: 4px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+/* Decorative geometric shape */
+body.style-memphis .section::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background: var(--color-accent-1);
+  border: 3px solid var(--border-color);
+  transform: rotate(45deg);
+}
+
+body.style-memphis .btn {
+  background: var(--bg-secondary);
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body.style-memphis .btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--border-color);
+}
+
+body.style-memphis .btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--border-color);
+}
+
+body.style-memphis .btn--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+body.style-memphis .btn--secondary {
+  background: var(--color-secondary);
+  color: white;
+}
+
+body.style-memphis .form-field__input,
+body.style-memphis .form-field__textarea,
+body.style-memphis .form-field__select {
+  background: white;
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+body.style-memphis .form-field__input:focus,
+body.style-memphis .form-field__textarea:focus {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+body.style-memphis .form-field__label {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body.style-memphis .checkbox__box,
+body.style-memphis .radio__circle {
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+body.style-memphis .checkbox__input:checked + .checkbox__box {
+  background: var(--color-primary);
+}
+
+body.style-memphis .radio__input:checked + .radio__circle {
+  background: var(--color-secondary);
+}
+
+body.style-memphis .toggle__track {
+  border: 3px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+
+body.style-memphis .toggle__input:checked + .toggle__track {
+  background: var(--color-primary);
+}
+
+body.style-memphis .card {
+  background: white;
+  border: 4px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+body.style-memphis .card--hoverable:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: var(--shadow-xl);
+}
+
+body.style-memphis .card__header {
+  background: var(--color-accent-1);
+  border-bottom: 3px solid var(--border-color);
+}
+
+body.style-memphis .modal {
+  border: 4px solid var(--border-color);
+  box-shadow: var(--shadow-xl);
+}
+
+body.style-memphis .modal__header {
+  background: var(--color-secondary);
+  color: white;
+  border-bottom: 3px solid var(--border-color);
+}
+
+body.style-memphis .tabs__tab {
+  border: 3px solid var(--border-color);
+  background: var(--bg-tertiary);
+  font-weight: 700;
+}
+
+body.style-memphis .tabs__tab--active {
+  background: var(--color-accent-1);
+}
+
+body.style-memphis .badge {
+  border: 2px solid var(--border-color);
+  font-weight: 700;
+}
+
+body.style-memphis .badge--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+body.style-memphis .badge--success {
+  background: var(--color-secondary);
+  color: white;
+}
+
+body.style-memphis .badge--warning {
+  background: var(--color-accent-1);
+  color: var(--text-primary);
+}
+
+body.style-memphis .progress__track {
+  border: 3px solid var(--border-color);
+  background: white;
+}
+
+body.style-memphis .progress__bar {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-primary) 10px,
+    var(--color-secondary) 10px,
+    var(--color-secondary) 20px
+  );
+}
+
+body.style-memphis .fab {
+  background: var(--color-primary);
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+body.style-memphis .pagination__button,
+body.style-memphis .pagination__page {
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
+
+body.style-memphis .pagination__page--active {
+  background: var(--color-primary);
+  color: white;
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+body.style-memphis .avatar {
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+body.style-memphis .tag {
+  border: 2px solid var(--border-color);
+  font-weight: 700;
+}

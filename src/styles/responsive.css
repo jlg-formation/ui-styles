@@ -1,0 +1,392 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN - Mobile-first breakpoints
+   ========================================================================== */
+
+/* Mobile: < 640px (default styles) */
+/* Tablet: >= 640px */
+/* Desktop: >= 1024px */
+/* Large Desktop: >= 1280px */
+
+/* ==========================================================================
+   Layout Responsive
+   ========================================================================== */
+
+/* Mobile-first: Sidebar is hidden */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 280px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.sidebar--open {
+  transform: translateX(0);
+}
+
+.sidebar__overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.sidebar--open + .sidebar__overlay,
+.sidebar--open ~ .sidebar__overlay {
+  display: block;
+}
+
+.main {
+  width: 100%;
+  margin-left: 0;
+}
+
+.header__menu-btn {
+  display: flex;
+}
+
+/* Tablet: >= 640px */
+@media (min-width: 640px) {
+  .content {
+    padding: var(--spacing-lg);
+  }
+
+  .section {
+    padding: var(--spacing-lg);
+  }
+
+  .component-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: >= 1024px */
+@media (min-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(0);
+  }
+
+  .sidebar__overlay {
+    display: none !important;
+  }
+
+  .main {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+  }
+
+  .header__menu-btn {
+    display: none;
+  }
+
+  .component-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large Desktop: >= 1280px */
+@media (min-width: 1280px) {
+  .content {
+    padding: var(--spacing-xl);
+  }
+
+  .component-group {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Component Responsive
+   ========================================================================== */
+
+/* Buttons */
+@media (max-width: 639px) {
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group .btn {
+    border-radius: var(--border-radius-md);
+    border-width: 1px;
+  }
+
+  .btn-group .btn:not(:last-child) {
+    border-bottom-width: 0;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Forms */
+@media (max-width: 639px) {
+  .form-field {
+    width: 100%;
+  }
+
+  .checkbox-group,
+  .radio-group {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Cards */
+@media (max-width: 639px) {
+  .card {
+    margin: 0 calc(var(--spacing-md) * -1);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+/* Modal */
+@media (max-width: 639px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .modal__content {
+    max-height: calc(100vh - 120px);
+  }
+}
+
+/* Tabs */
+@media (max-width: 639px) {
+  .tabs__list {
+    flex-wrap: wrap;
+  }
+
+  .tabs__tab {
+    flex: 1;
+    min-width: 50%;
+    justify-content: center;
+  }
+}
+
+/* Data Table */
+@media (max-width: 639px) {
+  .data-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .data-table__table {
+    min-width: 600px;
+  }
+}
+
+/* Pagination */
+@media (max-width: 639px) {
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pagination__page:not(.pagination__page--active) {
+    display: none;
+  }
+
+  .pagination__page:first-of-type,
+  .pagination__page:last-of-type,
+  .pagination__page--active {
+    display: flex;
+  }
+}
+
+/* Toast */
+@media (max-width: 639px) {
+  .toast-container {
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+    bottom: var(--spacing-sm);
+  }
+
+  .toast {
+    width: 100%;
+  }
+}
+
+/* Accordion */
+@media (max-width: 639px) {
+  .accordion {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+/* FAB Position */
+@media (max-width: 639px) {
+  .fab {
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+}
+
+@media (min-width: 640px) {
+  .fab {
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+  }
+}
+
+/* ==========================================================================
+   Typography Responsive
+   ========================================================================== */
+
+@media (max-width: 639px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================================================
+   Touch-friendly sizing
+   ========================================================================== */
+
+@media (pointer: coarse) {
+  .btn {
+    min-height: 44px;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .icon-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .checkbox__box,
+  .radio__circle {
+    width: 24px;
+    height: 24px;
+  }
+
+  .toggle__track {
+    width: 52px;
+    height: 28px;
+  }
+
+  .form-field__input,
+  .form-field__select {
+    min-height: 44px;
+  }
+
+  .tabs__tab {
+    min-height: 44px;
+  }
+
+  .pagination__button,
+  .pagination__page {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  .sidebar,
+  .header__menu-btn,
+  .fab,
+  .toast-container {
+    display: none !important;
+  }
+
+  .main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .modal {
+    position: static;
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  .modal__overlay {
+    display: none;
+  }
+
+  * {
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   High Contrast Mode
+   ========================================================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #000;
+  }
+
+  .btn,
+  .form-field__input,
+  .card,
+  .badge {
+    border-width: 2px;
+  }
+}

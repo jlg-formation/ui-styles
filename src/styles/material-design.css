@@ -1,0 +1,467 @@
+/* ==========================================================================
+   MATERIAL DESIGN - Elevation, smooth animations, vibrant colors
+   ========================================================================== */
+
+body.style-material-design {
+  /* Override variables for Material Design */
+  --color-primary: #6200ee;
+  --color-primary-hover: #5600d6;
+  --color-primary-active: #4b00be;
+  --color-primary-light: #ede7f6;
+
+  --color-secondary: #03dac6;
+  --color-secondary-hover: #02c4b2;
+
+  --color-success: #00c853;
+  --color-success-light: #e8f5e9;
+  --color-warning: #ffab00;
+  --color-warning-light: #fff8e1;
+  --color-error: #cf6679;
+  --color-error-light: #fce4ec;
+  --color-info: #2196f3;
+  --color-info-light: #e3f2fd;
+
+  --color-surface: #ffffff;
+  --color-on-surface: #1c1b1f;
+  --color-on-primary: #ffffff;
+
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f0f0;
+
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.6);
+  --text-tertiary: rgba(0, 0, 0, 0.38);
+
+  --border-color: rgba(0, 0, 0, 0.12);
+  --border-color-hover: rgba(0, 0, 0, 0.24);
+
+  /* Material elevation shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  --shadow-xl: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  --shadow-xxl: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+/* ==========================================================================
+   Layout - Material Design
+   ========================================================================== */
+
+body.style-material-design .sidebar {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+body.style-material-design .sidebar__button {
+  border: none;
+  border-radius: var(--border-radius-full);
+  position: relative;
+  overflow: hidden;
+}
+
+body.style-material-design .sidebar__button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+body.style-material-design .sidebar__button:hover::before {
+  opacity: 0.08;
+}
+
+body.style-material-design .sidebar__button--active {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+body.style-material-design .sidebar__button--active::before {
+  opacity: 0.12;
+}
+
+body.style-material-design .header {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+body.style-material-design .footer {
+  background: var(--color-surface);
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12);
+  border: none;
+}
+
+body.style-material-design .section {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  border: none;
+}
+
+/* ==========================================================================
+   Buttons - Material Design
+   ========================================================================== */
+
+body.style-material-design .btn {
+  border: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    box-shadow 0.2s,
+    transform 0.1s;
+}
+
+body.style-material-design .btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+body.style-material-design .btn:hover::before {
+  opacity: 0.08;
+}
+
+body.style-material-design .btn:active::before {
+  opacity: 0.16;
+}
+
+body.style-material-design .btn--primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+body.style-material-design .btn--primary:hover {
+  box-shadow: var(--shadow-md);
+}
+
+body.style-material-design .btn--secondary {
+  background: var(--color-secondary);
+  color: #000;
+}
+
+body.style-material-design .btn--outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+body.style-material-design .btn--ghost {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+body.style-material-design .icon-btn {
+  border: none;
+  border-radius: var(--border-radius-full);
+  position: relative;
+  overflow: hidden;
+}
+
+body.style-material-design .icon-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 0.2s;
+}
+
+body.style-material-design .icon-btn:hover::before {
+  opacity: 0.08;
+}
+
+body.style-material-design .fab {
+  background: var(--color-secondary);
+  color: #000;
+  box-shadow: var(--shadow-lg);
+  border: none;
+  border-radius: var(--border-radius-full);
+}
+
+body.style-material-design .fab:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+/* ==========================================================================
+   Forms - Material Design
+   ========================================================================== */
+
+body.style-material-design .form-field {
+  position: relative;
+}
+
+body.style-material-design .form-field__input,
+body.style-material-design .form-field__textarea,
+body.style-material-design .form-field__select {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+  background: rgba(0, 0, 0, 0.04);
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+body.style-material-design .form-field__input:hover,
+body.style-material-design .form-field__textarea:hover,
+body.style-material-design .form-field__select:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+body.style-material-design .form-field__input:focus,
+body.style-material-design .form-field__textarea:focus,
+body.style-material-design .form-field__select:focus {
+  border-bottom: 2px solid var(--color-primary);
+  background: rgba(0, 0, 0, 0.08);
+  outline: none;
+  box-shadow: none;
+}
+
+body.style-material-design .checkbox__box {
+  border: 2px solid var(--text-secondary);
+  border-radius: 2px;
+  background: transparent;
+}
+
+body.style-material-design .checkbox__input:checked + .checkbox__box {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+body.style-material-design .radio__circle {
+  border: 2px solid var(--text-secondary);
+}
+
+body.style-material-design .radio__input:checked + .radio__circle {
+  border-color: var(--color-primary);
+  background: transparent;
+}
+
+body.style-material-design .radio__input:checked + .radio__circle::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body.style-material-design .toggle__track {
+  background: rgba(0, 0, 0, 0.38);
+  border: none;
+  height: 14px;
+}
+
+body.style-material-design .toggle__thumb {
+  background: #fafafa;
+  box-shadow: var(--shadow-sm);
+  width: 20px;
+  height: 20px;
+  top: -3px;
+}
+
+body.style-material-design .toggle__input:checked + .toggle__track {
+  background: rgba(98, 0, 238, 0.5);
+}
+
+body.style-material-design
+  .toggle__input:checked
+  + .toggle__track
+  .toggle__thumb {
+  background: var(--color-primary);
+}
+
+/* ==========================================================================
+   Cards & Containers - Material Design
+   ========================================================================== */
+
+body.style-material-design .card {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  border: none;
+  overflow: hidden;
+}
+
+body.style-material-design .card--hoverable:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+body.style-material-design .card__header {
+  border-bottom: none;
+}
+
+body.style-material-design .modal {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-xxl);
+  border: none;
+  border-radius: var(--border-radius-xl);
+}
+
+body.style-material-design .modal__overlay {
+  background: rgba(0, 0, 0, 0.32);
+}
+
+body.style-material-design .accordion {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  border: none;
+}
+
+body.style-material-design .accordion__header {
+  padding: var(--spacing-md);
+}
+
+body.style-material-design .tabs__tab {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+}
+
+body.style-material-design .tabs__tab--active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+body.style-material-design .tabs__tab:hover {
+  background: rgba(98, 0, 238, 0.04);
+}
+
+body.style-material-design .data-table {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  border: none;
+}
+
+body.style-material-design .data-table__th {
+  background: transparent;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+body.style-material-design .data-table__tr:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   Feedback - Material Design
+   ========================================================================== */
+
+body.style-material-design .badge {
+  font-weight: 500;
+}
+
+body.style-material-design .alert {
+  border: none;
+  border-radius: var(--border-radius-sm);
+}
+
+body.style-material-design .toast {
+  background: #323232;
+  color: white;
+  box-shadow: var(--shadow-lg);
+  border: none;
+}
+
+body.style-material-design .progress__track {
+  background: rgba(98, 0, 238, 0.2);
+  height: 4px;
+}
+
+body.style-material-design .progress__bar {
+  background: var(--color-primary);
+}
+
+body.style-material-design .spinner {
+  border-width: 3px;
+  border-color: transparent;
+  border-top-color: var(--color-primary);
+}
+
+body.style-material-design .tooltip {
+  background: rgba(97, 97, 97, 0.9);
+  border-radius: var(--border-radius-sm);
+  font-size: 10px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+/* ==========================================================================
+   Media - Material Design
+   ========================================================================== */
+
+body.style-material-design .avatar {
+  border: none;
+}
+
+body.style-material-design .thumbnail {
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+body.style-material-design .thumbnail--clickable:hover {
+  box-shadow: var(--shadow-md);
+}
+
+body.style-material-design .tag {
+  border-radius: var(--border-radius-full);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+body.style-material-design .pagination__button,
+body.style-material-design .pagination__page {
+  border: none;
+  border-radius: var(--border-radius-full);
+  min-width: 32px;
+  height: 32px;
+}
+
+body.style-material-design .pagination__page--active {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+body.style-material-design .pagination__button:hover,
+body.style-material-design .pagination__page:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Ripple effect */
+@keyframes material-ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

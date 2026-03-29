@@ -1,0 +1,216 @@
+/* ==========================================================================
+   DUOTONE - Two-color combinations, bold contrast
+   ========================================================================== */
+
+body.style-duotone {
+  --color-primary: #7c3aed;
+  --color-primary-hover: #6d28d9;
+  --color-primary-active: #5b21b6;
+  --color-primary-light: #ede9fe;
+
+  --color-secondary: #fbbf24;
+  --color-secondary-hover: #f59e0b;
+
+  --color-success: #7c3aed;
+  --color-success-light: #ede9fe;
+  --color-warning: #fbbf24;
+  --color-warning-light: #fef3c7;
+  --color-error: #7c3aed;
+  --color-error-light: #ede9fe;
+  --color-info: #fbbf24;
+  --color-info-light: #fef3c7;
+
+  --bg-primary: #faf5ff;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #ede9fe;
+
+  --text-primary: #4c1d95;
+  --text-secondary: #6d28d9;
+  --text-tertiary: #8b5cf6;
+
+  --border-color: #ddd6fe;
+  --border-color-hover: #c4b5fd;
+
+  --shadow-sm: 0 1px 3px rgba(124, 58, 237, 0.1);
+  --shadow-md: 0 4px 6px rgba(124, 58, 237, 0.1);
+  --shadow-lg: 0 10px 15px rgba(124, 58, 237, 0.1);
+  --shadow-xl: 0 20px 25px rgba(124, 58, 237, 0.15);
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+}
+
+body.style-duotone .sidebar {
+  background: var(--color-primary);
+  border: none;
+}
+
+body.style-duotone .sidebar__button {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+}
+
+body.style-duotone .sidebar__button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+body.style-duotone .sidebar__button--active {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+body.style-duotone .header {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+body.style-duotone .header__title {
+  color: var(--color-secondary);
+}
+
+body.style-duotone .footer {
+  background: var(--color-primary);
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+}
+
+body.style-duotone .section {
+  background: var(--bg-secondary);
+  border: 2px solid var(--color-primary);
+}
+
+body.style-duotone .section__title {
+  color: var(--color-primary);
+}
+
+body.style-duotone .btn {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+body.style-duotone .btn:hover {
+  background: var(--color-primary-hover);
+}
+
+body.style-duotone .btn--primary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+body.style-duotone .btn--primary:hover {
+  background: var(--color-secondary-hover);
+}
+
+body.style-duotone .btn--secondary {
+  background: var(--color-primary);
+  color: white;
+}
+
+body.style-duotone .btn--outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+body.style-duotone .form-field__input,
+body.style-duotone .form-field__textarea,
+body.style-duotone .form-field__select {
+  border: 2px solid var(--border-color);
+}
+
+body.style-duotone .form-field__input:focus,
+body.style-duotone .form-field__textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+body.style-duotone .form-field__label {
+  color: var(--color-primary);
+}
+
+body.style-duotone .checkbox__input:checked + .checkbox__box,
+body.style-duotone .radio__input:checked + .radio__circle {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+body.style-duotone .toggle__input:checked + .toggle__track {
+  background: var(--color-primary);
+}
+
+body.style-duotone .card {
+  border: 2px solid var(--border-color);
+}
+
+body.style-duotone .card--hoverable:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+body.style-duotone .card__header {
+  background: var(--color-primary-light);
+  border-bottom: 2px solid var(--border-color);
+}
+
+body.style-duotone .tabs__tab {
+  color: var(--color-primary);
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+body.style-duotone .tabs__tab--active {
+  border-bottom-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+body.style-duotone .badge {
+  background: var(--color-primary);
+  color: white;
+}
+
+body.style-duotone .badge--primary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+body.style-duotone .progress__track {
+  background: var(--color-primary-light);
+}
+
+body.style-duotone .progress__bar {
+  background: var(--color-primary);
+}
+
+body.style-duotone .alert {
+  border: 2px solid var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+body.style-duotone .fab {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+}
+
+body.style-duotone .pagination__page--active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+body.style-duotone .tag {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+body.style-duotone .avatar {
+  border: 3px solid var(--color-secondary);
+}

@@ -1,0 +1,249 @@
+/* ==========================================================================
+   FLAT DESIGN - Clean, Minimal, No Shadows
+   ========================================================================== */
+
+body.style-flat-design {
+  /* Override variables for Flat Design */
+  --color-primary: #3498db;
+  --color-primary-hover: #2980b9;
+  --color-primary-active: #2471a3;
+  --color-primary-light: #ebf5fb;
+
+  --color-secondary: #95a5a6;
+  --color-secondary-hover: #7f8c8d;
+
+  --color-success: #27ae60;
+  --color-success-light: #d5f5e3;
+  --color-warning: #f39c12;
+  --color-warning-light: #fef9e7;
+  --color-error: #e74c3c;
+  --color-error-light: #fdedec;
+  --color-info: #3498db;
+  --color-info-light: #ebf5fb;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #ecf0f1;
+
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --text-tertiary: #bdc3c7;
+
+  --border-color: #dfe6e9;
+  --border-color-hover: #b2bec3;
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 6px;
+  --border-radius-xl: 8px;
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+body.style-flat-design .sidebar {
+  background-color: var(--bg-secondary);
+  border-right: 2px solid var(--color-primary);
+}
+
+body.style-flat-design .sidebar__button--active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Components - Flat Design Overrides
+   ========================================================================== */
+
+/* Buttons */
+body.style-flat-design .btn {
+  border-radius: var(--border-radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: var(--font-weight-semibold);
+}
+
+body.style-flat-design .btn--primary {
+  box-shadow: none;
+}
+
+body.style-flat-design .btn--outline {
+  border-width: 2px;
+}
+
+/* Form Fields */
+body.style-flat-design .form-field__input,
+body.style-flat-design .form-field__textarea,
+body.style-flat-design .form-field__select {
+  border-width: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+body.style-flat-design .form-field__input:focus,
+body.style-flat-design .form-field__textarea:focus,
+body.style-flat-design .form-field__select:focus {
+  box-shadow: none;
+  border-color: var(--color-primary);
+}
+
+/* Checkbox & Radio */
+body.style-flat-design .checkbox__box,
+body.style-flat-design .radio__circle {
+  border-width: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+body.style-flat-design .radio__circle {
+  border-radius: var(--border-radius-full);
+}
+
+/* Toggle */
+body.style-flat-design .toggle__track {
+  border-radius: var(--border-radius-sm);
+}
+
+body.style-flat-design .toggle__thumb {
+  border-radius: var(--border-radius-sm);
+}
+
+/* Cards */
+body.style-flat-design .card {
+  border-radius: var(--border-radius-sm);
+  border: 2px solid var(--border-color);
+}
+
+body.style-flat-design .card--hoverable:hover {
+  border-color: var(--color-primary);
+  transform: none;
+}
+
+/* Badges & Tags */
+body.style-flat-design .badge,
+body.style-flat-design .tag {
+  border-radius: var(--border-radius-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Alert */
+body.style-flat-design .alert {
+  border-radius: var(--border-radius-sm);
+  border-width: 2px;
+  border-left-width: 4px;
+}
+
+/* Toast */
+body.style-flat-design .toast {
+  border-radius: var(--border-radius-sm);
+  border-left-width: 4px;
+  box-shadow: none;
+  border: 1px solid var(--border-color);
+}
+
+/* Modal */
+body.style-flat-design .modal {
+  border-radius: var(--border-radius-sm);
+  border: 2px solid var(--border-color);
+}
+
+/* Accordion */
+body.style-flat-design .accordion {
+  border-radius: var(--border-radius-sm);
+  border-width: 2px;
+}
+
+/* Tabs */
+body.style-flat-design .tabs__tab {
+  border-bottom-width: 3px;
+}
+
+body.style-flat-design .tabs__tab--active {
+  border-bottom-color: var(--color-primary);
+}
+
+/* Progress */
+body.style-flat-design .progress__track,
+body.style-flat-design .progress__bar {
+  border-radius: 0;
+}
+
+/* Pagination */
+body.style-flat-design .pagination__button,
+body.style-flat-design .pagination__page {
+  border-radius: var(--border-radius-sm);
+  border-width: 2px;
+}
+
+/* Avatar */
+body.style-flat-design .avatar {
+  border: 2px solid var(--border-color);
+}
+
+/* FAB */
+body.style-flat-design .fab {
+  border-radius: var(--border-radius-md);
+  box-shadow: none;
+}
+
+body.style-flat-design .fab:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Icon Button */
+body.style-flat-design .icon-btn {
+  border-radius: var(--border-radius-sm);
+}
+
+/* Tooltip */
+body.style-flat-design .tooltip {
+  border-radius: var(--border-radius-sm);
+}
+
+/* Data Table */
+body.style-flat-design .data-table {
+  border: 2px solid var(--border-color);
+}
+
+body.style-flat-design .data-table__th {
+  background-color: var(--color-primary);
+  color: white;
+  border-bottom: none;
+}
+
+/* Thumbnail */
+body.style-flat-design .thumbnail {
+  border-radius: var(--border-radius-sm);
+  border: 2px solid var(--border-color);
+}
+
+body.style-flat-design .thumbnail--clickable:hover {
+  transform: none;
+  border-color: var(--color-primary);
+}
+
+/* Range Slider */
+body.style-flat-design .range-slider__input {
+  border-radius: 0;
+}
+
+body.style-flat-design .range-slider__input::-webkit-slider-thumb {
+  border-radius: var(--border-radius-sm);
+  border: none;
+  box-shadow: none;
+}
+
+body.style-flat-design .range-slider__input::-moz-range-thumb {
+  border-radius: var(--border-radius-sm);
+  border: none;
+  box-shadow: none;
+}

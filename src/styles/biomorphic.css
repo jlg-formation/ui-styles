@@ -1,0 +1,173 @@
+/* ==========================================================================
+   BIOMORPHIC - Organic shapes, natural curves, soft edges
+   ========================================================================== */
+
+body.style-biomorphic {
+  --color-primary: #059669;
+  --color-primary-hover: #047857;
+  --color-primary-active: #065f46;
+  --color-primary-light: #d1fae5;
+
+  --color-secondary: #7c3aed;
+  --color-secondary-hover: #6d28d9;
+
+  --color-success: #10b981;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+  --color-info: #06b6d4;
+  --color-info-light: #cffafe;
+
+  --bg-primary: #fefce8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f7fee7;
+
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-tertiary: #a8a29e;
+
+  --border-color: #d6d3d1;
+  --border-color-hover: #a8a29e;
+
+  --shadow-sm: 0 2px 8px rgba(5, 150, 105, 0.1);
+  --shadow-md: 0 4px 16px rgba(5, 150, 105, 0.15);
+  --shadow-lg: 0 8px 32px rgba(5, 150, 105, 0.2);
+
+  --border-radius-sm: 20px 8px 20px 8px;
+  --border-radius-md: 30px 12px 30px 12px;
+  --border-radius-lg: 40px 16px 40px 16px;
+  --border-radius-xl: 50px 20px 50px 20px;
+  --border-radius-blob: 60% 40% 30% 70% / 60% 30% 70% 40%;
+
+  font-family: "Quicksand", "Nunito", sans-serif;
+}
+
+body.style-biomorphic .sidebar {
+  background: var(--bg-secondary);
+  border-radius: 0 40px 40px 0;
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+body.style-biomorphic .sidebar__button {
+  border-radius: 50px;
+  border: none;
+  background: transparent;
+}
+
+body.style-biomorphic .sidebar__button--active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-blob);
+}
+
+body.style-biomorphic .header {
+  background: var(--bg-secondary);
+  border-radius: 0 0 50px 0;
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+body.style-biomorphic .section {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+body.style-biomorphic .btn {
+  border-radius: 50px;
+  border: none;
+  background: var(--bg-tertiary);
+}
+
+body.style-biomorphic .btn:hover {
+  transform: scale(1.02);
+}
+
+body.style-biomorphic .btn--primary {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-blob);
+}
+
+body.style-biomorphic .form-field__input,
+body.style-biomorphic .form-field__textarea {
+  border-radius: 30px;
+  border: 2px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+
+body.style-biomorphic .form-field__input:focus,
+body.style-biomorphic .form-field__textarea:focus {
+  border-color: var(--color-primary);
+  border-radius: var(--border-radius-blob);
+}
+
+body.style-biomorphic .card {
+  border-radius: var(--border-radius-lg);
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+body.style-biomorphic .card--hoverable:hover {
+  border-radius: var(--border-radius-blob);
+  transform: scale(1.01);
+}
+
+body.style-biomorphic .modal {
+  border-radius: var(--border-radius-xl);
+  border: none;
+}
+
+body.style-biomorphic .badge {
+  border-radius: 50px;
+}
+
+body.style-biomorphic .badge--primary {
+  border-radius: var(--border-radius-blob);
+}
+
+body.style-biomorphic .tabs__tab {
+  border-radius: 30px 30px 0 0;
+  border: none;
+}
+
+body.style-biomorphic .tabs__tab--active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: 40px 10px 0 0;
+}
+
+body.style-biomorphic .avatar {
+  border-radius: var(--border-radius-blob);
+}
+
+body.style-biomorphic .fab {
+  border-radius: var(--border-radius-blob);
+  background: var(--color-primary);
+  border: none;
+}
+
+body.style-biomorphic .tag {
+  border-radius: 50px;
+}
+
+body.style-biomorphic .progress__track,
+body.style-biomorphic .progress__bar {
+  border-radius: 50px;
+}
+
+body.style-biomorphic .pagination__page,
+body.style-biomorphic .pagination__button {
+  border-radius: 50px;
+  border: none;
+}
+
+body.style-biomorphic .pagination__page--active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-blob);
+}

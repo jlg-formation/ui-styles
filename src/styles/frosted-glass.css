@@ -1,0 +1,160 @@
+/* ==========================================================================
+   FROSTED GLASS - Heavy blur, translucent panels, depth effect
+   ========================================================================== */
+
+body.style-frosted-glass {
+  --color-primary: #0ea5e9;
+  --color-primary-hover: #0284c7;
+  --color-primary-active: #0369a1;
+  --color-primary-light: rgba(14, 165, 233, 0.2);
+
+  --color-secondary: #8b5cf6;
+  --color-secondary-hover: #7c3aed;
+
+  --color-success: #22c55e;
+  --color-success-light: rgba(34, 197, 94, 0.2);
+  --color-warning: #eab308;
+  --color-warning-light: rgba(234, 179, 8, 0.2);
+  --color-error: #ef4444;
+  --color-error-light: rgba(239, 68, 68, 0.2);
+  --color-info: #06b6d4;
+  --color-info-light: rgba(6, 182, 212, 0.2);
+
+  --bg-primary: #f0f9ff;
+  --bg-secondary: rgba(255, 255, 255, 0.7);
+  --bg-tertiary: rgba(255, 255, 255, 0.5);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+
+  --border-color: rgba(255, 255, 255, 0.3);
+  --border-color-hover: rgba(255, 255, 255, 0.5);
+
+  --frost-blur: blur(20px);
+  --frost-bg: rgba(255, 255, 255, 0.6);
+  --frost-border: 1px solid rgba(255, 255, 255, 0.4);
+
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.15);
+
+  --border-radius-sm: 16px;
+  --border-radius-md: 20px;
+  --border-radius-lg: 28px;
+  --border-radius-xl: 36px;
+
+  background: linear-gradient(135deg, #e0f2fe 0%, #fae8ff 50%, #dbeafe 100%);
+  min-height: 100vh;
+}
+
+body.style-frosted-glass .sidebar {
+  background: var(--frost-bg);
+  backdrop-filter: var(--frost-blur);
+  -webkit-backdrop-filter: var(--frost-blur);
+  border: var(--frost-border);
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+body.style-frosted-glass .sidebar__button {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border: var(--frost-border);
+}
+
+body.style-frosted-glass .sidebar__button--active {
+  background: var(--color-primary);
+  color: white;
+  border-color: transparent;
+}
+
+body.style-frosted-glass .header {
+  background: var(--frost-bg);
+  backdrop-filter: var(--frost-blur);
+  -webkit-backdrop-filter: var(--frost-blur);
+  border-bottom: var(--frost-border);
+}
+
+body.style-frosted-glass .section {
+  background: var(--frost-bg);
+  backdrop-filter: var(--frost-blur);
+  -webkit-backdrop-filter: var(--frost-blur);
+  border: var(--frost-border);
+  box-shadow: var(--shadow-md);
+}
+
+body.style-frosted-glass .btn {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: var(--frost-border);
+}
+
+body.style-frosted-glass .btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+body.style-frosted-glass .btn--primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+body.style-frosted-glass .form-field__input,
+body.style-frosted-glass .form-field__textarea,
+body.style-frosted-glass .form-field__select {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: var(--frost-border);
+}
+
+body.style-frosted-glass .form-field__input:focus,
+body.style-frosted-glass .form-field__textarea:focus {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--color-primary);
+}
+
+body.style-frosted-glass .card {
+  background: var(--frost-bg);
+  backdrop-filter: var(--frost-blur);
+  -webkit-backdrop-filter: var(--frost-blur);
+  border: var(--frost-border);
+  box-shadow: var(--shadow-md);
+}
+
+body.style-frosted-glass .card--hoverable:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+body.style-frosted-glass .modal {
+  background: var(--frost-bg);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: var(--frost-border);
+  box-shadow: var(--shadow-xl);
+}
+
+body.style-frosted-glass .tabs__tab--active {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body.style-frosted-glass .toast {
+  background: var(--frost-bg);
+  backdrop-filter: var(--frost-blur);
+  border: var(--frost-border);
+  box-shadow: var(--shadow-lg);
+}
+
+body.style-frosted-glass .badge {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+body.style-frosted-glass .fab {
+  background: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+  border: none;
+}

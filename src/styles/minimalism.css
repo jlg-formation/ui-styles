@@ -1,0 +1,162 @@
+/* ==========================================================================
+   MINIMALISM - Clean, simple, focused on content
+   ========================================================================== */
+
+body.style-minimalism {
+  --color-primary: #111111;
+  --color-primary-hover: #333333;
+  --color-primary-active: #000000;
+  --color-primary-light: #f5f5f5;
+
+  --color-secondary: #666666;
+  --color-secondary-hover: #555555;
+
+  --color-success: #2d6a4f;
+  --color-success-light: #f0f7f4;
+  --color-warning: #9a6700;
+  --color-warning-light: #fffbeb;
+  --color-error: #9b2c2c;
+  --color-error-light: #fef2f2;
+  --color-info: #1e40af;
+  --color-info-light: #eff6ff;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f5f5f5;
+
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+
+  --border-color: #e5e5e5;
+  --border-color-hover: #cccccc;
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+
+  --border-radius-sm: 0;
+  --border-radius-md: 0;
+  --border-radius-lg: 0;
+  --border-radius-xl: 0;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  letter-spacing: -0.01em;
+}
+
+body.style-minimalism .sidebar {
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-color);
+}
+
+body.style-minimalism .sidebar__button {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+body.style-minimalism .sidebar__button--active {
+  border-bottom-color: var(--color-primary);
+  font-weight: 600;
+}
+
+body.style-minimalism .header {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+body.style-minimalism .section {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+body.style-minimalism .btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  font-weight: 500;
+}
+
+body.style-minimalism .btn--primary {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+body.style-minimalism .btn--outline {
+  border-width: 1px;
+}
+
+body.style-minimalism .form-field__input,
+body.style-minimalism .form-field__textarea,
+body.style-minimalism .form-field__select {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.style-minimalism .form-field__input:focus,
+body.style-minimalism .form-field__textarea:focus,
+body.style-minimalism .form-field__select:focus {
+  border-bottom-color: var(--color-primary);
+  box-shadow: none;
+}
+
+body.style-minimalism .card {
+  border: 1px solid var(--border-color);
+}
+
+body.style-minimalism .card--hoverable:hover {
+  border-color: var(--color-primary);
+  transform: none;
+}
+
+body.style-minimalism .tabs__tab {
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+}
+
+body.style-minimalism .tabs__tab--active {
+  border-bottom-color: var(--color-primary);
+}
+
+body.style-minimalism .badge {
+  background: var(--bg-tertiary);
+  font-weight: 500;
+}
+
+body.style-minimalism .tag {
+  background: transparent;
+  border: 1px solid var(--border-color);
+}
+
+body.style-minimalism .progress__track {
+  background: var(--bg-tertiary);
+  height: 2px;
+  border-radius: 0;
+}
+
+body.style-minimalism .progress__bar {
+  background: var(--color-primary);
+  border-radius: 0;
+}
+
+body.style-minimalism .pagination__button,
+body.style-minimalism .pagination__page {
+  border: 1px solid var(--border-color);
+  background: transparent;
+}
+
+body.style-minimalism .pagination__page--active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}

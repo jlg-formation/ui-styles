@@ -1,0 +1,175 @@
+/* ==========================================================================
+   MONOCHROME - Single color palette, elegant grayscale
+   ========================================================================== */
+
+body.style-monochrome {
+  --color-primary: #18181b;
+  --color-primary-hover: #3f3f46;
+  --color-primary-active: #52525b;
+  --color-primary-light: #f4f4f5;
+
+  --color-secondary: #71717a;
+  --color-secondary-hover: #52525b;
+
+  --color-success: #3f3f46;
+  --color-success-light: #e4e4e7;
+  --color-warning: #52525b;
+  --color-warning-light: #e4e4e7;
+  --color-error: #27272a;
+  --color-error-light: #e4e4e7;
+  --color-info: #71717a;
+  --color-info-light: #f4f4f5;
+
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f4f4f5;
+
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --text-tertiary: #a1a1aa;
+
+  --border-color: #e4e4e7;
+  --border-color-hover: #d4d4d8;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+}
+
+body.style-monochrome .sidebar {
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+}
+
+body.style-monochrome .sidebar__button {
+  background: transparent;
+  border: none;
+}
+
+body.style-monochrome .sidebar__button--active {
+  background: var(--color-primary);
+  color: white;
+}
+
+body.style-monochrome .header {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+body.style-monochrome .section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+body.style-monochrome .btn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+body.style-monochrome .btn--primary {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+body.style-monochrome .btn--secondary {
+  background: white;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+body.style-monochrome .btn--outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+body.style-monochrome .form-field__input,
+body.style-monochrome .form-field__textarea,
+body.style-monochrome .form-field__select {
+  border: 1px solid var(--border-color);
+  background: white;
+}
+
+body.style-monochrome .form-field__input:focus,
+body.style-monochrome .form-field__textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.1);
+}
+
+body.style-monochrome .checkbox__input:checked + .checkbox__box,
+body.style-monochrome .radio__input:checked + .radio__circle {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+body.style-monochrome .toggle__input:checked + .toggle__track {
+  background: var(--color-primary);
+}
+
+body.style-monochrome .card {
+  border: 1px solid var(--border-color);
+  background: white;
+}
+
+body.style-monochrome .card--hoverable:hover {
+  border-color: var(--color-primary);
+}
+
+body.style-monochrome .tabs__tab {
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+body.style-monochrome .tabs__tab--active {
+  border-bottom-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+body.style-monochrome .badge {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+body.style-monochrome .badge--primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+body.style-monochrome .progress__track {
+  background: var(--bg-tertiary);
+}
+
+body.style-monochrome .progress__bar {
+  background: var(--color-primary);
+}
+
+body.style-monochrome .pagination__page--active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+body.style-monochrome .fab {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+body.style-monochrome .tag {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
