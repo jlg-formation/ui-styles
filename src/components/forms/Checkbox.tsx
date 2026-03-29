@@ -1,4 +1,5 @@
-import { InputHTMLAttributes, forwardRef } from "react";
+import type { InputHTMLAttributes } from "react";
+import { forwardRef } from "react";
 import { CheckIcon } from "@heroicons/react/24/outline";
 
 interface CheckboxProps extends Omit<

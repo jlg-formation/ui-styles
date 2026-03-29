@@ -1,4 +1,5 @@
-import { ButtonHTMLAttributes, forwardRef, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { forwardRef } from "react";
 
 type IconButtonVariant = "primary" | "secondary" | "outline" | "ghost";
 type IconButtonSize = "sm" | "md" | "lg";
